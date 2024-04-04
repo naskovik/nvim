@@ -1,6 +1,6 @@
 function ColorDeezPencils(color)
 
-    color = color or "catppuccin"
+    color = color or "nordic"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -44,29 +44,13 @@ return {
     },
 
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        'AlexvZyl/nordic.nvim',
+        lazy = false,
+        priority = 1000,
         config = function()
-            require("catppuccin").setup({
-                flavour = "frappe",
-                transparent_background = true,
-                term_colors = true,
-
-                no_italic = true,
-                no_bold = true,
-                no_underline = true,
-
-                styles = {
-                    conditionals = { nil }
-                },
-                color_overrides = {},
-                custom_highlights = {},
-            })
-
-
-        ColorDeezPencils()
-
+            require 'nordic' .load()
+            ColorDeezPencils()
         end
-    },
+    }
 
 }
