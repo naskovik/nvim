@@ -14,32 +14,17 @@ return {
         "rebelot/kanagawa.nvim",
         config = function()
             require("kanagawa").setup({
-                compile = false,             -- enable compiling the colorscheme
-                undercurl = false,            -- enable undercurls
                 commentStyle = { italic = false },
-                functionStyle = {},
                 keywordStyle = { italic = false },
                 statementStyle = { bold = true },
-                typeStyle = {},
-                transparent = true,         -- do not set background color
-                dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-                terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-                colors = {                   -- add/modify theme and palette colors
-                palette = {},
-                theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-            },
-            overrides = function(colors) -- add/modify highlights
-                return {}
-            end,
-            theme = "wave",              -- Load "wave" theme when 'background' option is not set
-            background = {               -- map the value of 'background' option to a theme
-                dark = "wave",           -- try "dragon" !
-                light = "lotus"
-            },
-        })
+                theme = "wave",              -- Load "wave" theme when 'background' option is not set
+                background = {               -- map the value of 'background' option to a theme
+                    dark = "wave",           -- try "dragon" !
+                    light = "lotus"
+                },
+            })
 
-
-    end
+        end
 
     },
 
@@ -56,7 +41,7 @@ return {
                 },
                 transparent_background = false, -- disables setting the background color.
                 show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-                term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+                term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
                 dim_inactive = {
                     enabled = false, -- dims the background color of inactive window
                     shade = "dark",
@@ -85,8 +70,11 @@ return {
                     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
                 },
             })
+
             ColorDeezPencils('catppuccin')
         end
-    }
+    },
+
+    { "neanias/everforest-nvim" },
 
 }
