@@ -1,6 +1,6 @@
 function ColorDeezPencils(color)
 
-    color = color or "catppuccin"
+    color = color or "evergarden"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -71,10 +71,34 @@ return {
                 },
             })
 
-            ColorDeezPencils('catppuccin')
         end
     },
 
     { "neanias/everforest-nvim" },
+
+    {
+        'comfysage/evergarden',
+        opts = {
+            transparent_background = false,
+            contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+            overrides = { }, -- add custom overrides
+        },
+        config = function()
+            require 'evergarden'.setup {
+                transparent_background = false,
+                contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+                override_terminal = true,
+                style = {
+                    tabline = { reverse = true, color = 'green' },
+                    search = { reverse = false, inc_reverse = true },
+                    types = { italic = false },
+                    keyword = { italic = false },
+                    comment = { italic = false },
+                },
+                overrides = { }, -- add custom overrides
+            }
+            ColorDeezPencils('evergarden')
+        end
+    }
 
 }
