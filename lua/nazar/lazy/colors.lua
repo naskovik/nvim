@@ -1,6 +1,6 @@
 function ColorDeezPencils(color)
 
-    color = color or "catppuccin"
+    color = color or "base16-gruvbox-dark-medium"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -71,13 +71,13 @@ return {
                 },
             })
 
-            ColorDeezPencils('catppuccin')
         end
     },
 
 
     {
         "tinted-theming/base16-vim",
+        config = function() ColorDeezPencils() end
     }
 
 }
