@@ -74,30 +74,11 @@ return {
         end
     },
 
-    { "neanias/everforest-nvim" },
 
     {
-        'comfysage/evergarden',
-        opts = {
-            transparent_background = false,
-            contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
-            overrides = { }, -- add custom overrides
-        },
+        "tinted-theming/base16-vim",
         config = function()
-            require 'evergarden'.setup {
-                transparent_background = false,
-                contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
-                override_terminal = true,
-                style = {
-                    tabline = { reverse = true, color = 'green' },
-                    search = { reverse = false, inc_reverse = true },
-                    types = { italic = false },
-                    keyword = { italic = false },
-                    comment = { italic = false },
-                },
-                overrides = { }, -- add custom overrides
-            }
-            ColorDeezPencils('evergarden')
+            ColorDeezPencils('base16-gruvbox-dark-medium')
         end
     }
 
