@@ -13,19 +13,11 @@ return {
   -- add kanagawa
   { 'rebelot/kanagawa.nvim' },
   { 'AlexvZyl/nordic.nvim' },
-  {
-    "HoNamDuong/hybrid.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true
-    },
-  },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "hybrid",
+      colorscheme = "tokyonight-storm",
     },
   },
 
