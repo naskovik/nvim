@@ -9,7 +9,14 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
-  --{ "ellisonleao/gruvbox.nvim" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      palette_overrides = {
+        red = "#f75f5f"
+      }
+    }
+  },
   -- add kanagawa
   { 'rebelot/kanagawa.nvim' },
   { 'AlexvZyl/nordic.nvim' },
@@ -17,7 +24,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-storm",
+      colorscheme = "gruvbox",
     },
   },
 
