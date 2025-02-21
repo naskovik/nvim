@@ -8,19 +8,15 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- add gruvbox
   {
-    "ellisonleao/gruvbox.nvim",
+    "folke/tokyonight.nvim",
+    lazy = true,
     opts = {
-      palette_overrides = {
-        red = "#f75f5f"
-      }
-    }
+      style = "storm",
+    },
   },
   -- add kanagawa
   { 'rebelot/kanagawa.nvim' },
-  { 'AlexvZyl/nordic.nvim' },
-
   {
     "LazyVim/LazyVim",
     opts = {
